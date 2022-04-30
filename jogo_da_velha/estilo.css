@@ -15,8 +15,7 @@ body {
 }
 
 .quadrado:hover {
-    width: 55px;
-    background-color: gray;
+    background: gray;
 }
 
 .sobre_quadrado:hover {

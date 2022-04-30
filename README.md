@@ -13,7 +13,7 @@
     <td>Jogo da Velha</td>
     <td>Implementar a lógica de jogo da velha</td>
     <td>HTML, CSS e JavaScript</td>
-    <td><a href="#">jogo_da_velha</a></td>
+    <td><a href="https://github.com/Jeffrs123/estudos_digital_innovation/tree/main/jogo_da_velha">jogo_da_velha</a></td>
   </tr>
   <tr>
     <td>ss</td>
