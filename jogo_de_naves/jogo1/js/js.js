@@ -18,8 +18,11 @@ function start() {
         DOWN: 40,
         BACKSPACE: 8
     };
-
     jogo.pressionou = [];
+    var velocidade = 5;
+    var posicaoY = parseInt(Math.random() * 334);
+
+
 
     //Verifica se o usu�rio pressionou alguma tecla	
 
@@ -40,6 +43,7 @@ function start() {
 
         movefundo();
         movejogador();
+        moveinimigo1();
 
     }
 
@@ -57,23 +61,23 @@ function start() {
     function movejogador() {
 
         if (jogo.pressionou[TECLA.W] || jogo.pressionou[TECLA.UP]) {
-            
+
             var topo = parseInt($("#jogador").css("top"));
-            
+
             $("#jogador").css("top", topo - 10);
-            
-            if (topo<=10)
-                $("#jogador").css("top",topo+10);
+
+            if (topo <= 10)
+                $("#jogador").css("top", topo + 10);
         }
 
         if (jogo.pressionou[TECLA.S] || jogo.pressionou[TECLA.DOWN]) {
 
             var topo = parseInt($("#jogador").css("top"));
-            
+
             $("#jogador").css("top", topo + 10);
 
-            if (topo>=434)
-                $("#jogador").css("top",topo-10);
+            if (topo >= 434)
+                $("#jogador").css("top", topo - 10);
         }
 
         if (jogo.pressionou[TECLA.D] || jogo.pressionou[TECLA.BACKSPACE]) {
@@ -81,6 +85,21 @@ function start() {
             //Chama fun��o Disparo	
         }
 
+    }
+
+    //Início da função moveinimigo1()
+    function moveinimigo1() {
+
+        posicaoX = parseInt($("#inimigo1").css("left"));
+        $("#inimigo1").css("left", posicaoX - velocidade);
+        $("#inimigo1").css("top", posicaoY);
+
+        if (posicaoX <= 0) {
+            posicaoY = parseInt(Math.random() * 334);
+            $("#inimigo1").css("left", 694);
+            $("#inimigo1").css("top", posicaoY);
+
+        }
     }
 
 }
