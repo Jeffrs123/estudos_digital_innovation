@@ -8,7 +8,6 @@ function start() {
     $("#fundoGame").append("<div id='amigo' class='anima3' ></div>");
 
     //Principais variáveis do jogo
-
     var jogo = {};
     var TECLA = {
         W: 87,
@@ -16,12 +15,12 @@ function start() {
         D: 68,
         UP: 38,
         DOWN: 40,
-        BACKSPACE: 8
+        ESCAPE: 32
     };
     jogo.pressionou = [];
     var velocidade = 5;
     var posicaoY = parseInt(Math.random() * 334);
-
+    var podeAtirar = true;
 
 
     //Verifica se o usu�rio pressionou alguma tecla	
@@ -46,6 +45,7 @@ function start() {
         moveinimigo1();
         moveinimigo2();
         moveamigo();
+        
 
     }
 
@@ -82,9 +82,10 @@ function start() {
                 $("#jogador").css("top", topo - 10);
         }
 
-        if (jogo.pressionou[TECLA.D] || jogo.pressionou[TECLA.BACKSPACE]) {
+        if (jogo.pressionou[TECLA.D] || jogo.pressionou[TECLA.ESCAPE]) {
 
             //Chama fun��o Disparo	
+            disparo();
         }
 
     }
@@ -109,7 +110,7 @@ function start() {
         posicaoX = parseInt($("#inimigo2").css("left"));
         $("#inimigo2").css("left", posicaoX - 3);
 
-        if (posicaoX <= 0) 
+        if (posicaoX <= 0)
             $("#inimigo2").css("left", 775);
     }
 
@@ -122,6 +123,42 @@ function start() {
         if (posicaoX > 906)
             $("#amigo").css("left", 0);
 
+    }
+
+    // Início do disparo()
+    function disparo() {
+
+        // Verificar Se podeAtirar e o que fazer
+        if (podeAtirar == true) {
+
+            podeAtirar = false;
+
+            topo = parseInt($("#jogador").css("top"))
+            posicaoX = parseInt($("#jogador").css("left"))
+            tiroX = posicaoX + 190;
+            topoTiro = topo + 37;
+            $("#fundoGame").append("<div id='disparo'></div");
+            $("#disparo").css("top", topoTiro);
+            $("#disparo").css("left", tiroX);
+
+            var tempoDisparo = window.setInterval(executaDisparo, 30);
+
+        } 
+
+        // Início do executaDisparo()
+        function executaDisparo() {
+            posicaoX = parseInt($("#disparo").css("left"));
+            $("#disparo").css("left", posicaoX + 15);
+
+            if (posicaoX > 900) {
+
+                window.clearInterval(tempoDisparo);
+                tempoDisparo = null; // Existem browsers que o "clearInterval" não é o suficiente, assim se necessita indicar que a variável esteja null.
+                $("#disparo").remove();
+                podeAtirar = true;
+
+            }
+        } 
     }
 
 }
