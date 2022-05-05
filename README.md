@@ -18,7 +18,7 @@
   <tr>
     <td>Jogo de Naves</td>
     <td>Implementar lógica para desenvolver jogo de naves. Tendo como apoio o uso da IDE Visual Studio Code, 2 libs e testando no Chrome.</td>
-    <td> e as bibliotecas externas: Jquery (v3.5.1 - versão atual do site -> jquery.com),JQuery Collision (sourceforge.net/projects/jquerycollision -> para evitar colisões entre as DIV's, o novo Jquery tem essa implementação, mas esse Jquery Collision já tem funcionalidades próprias para jogos ), e uso do Crome. Link de artefatos para o jogo (https://dropbox.com/s/17010wb608q4olu/JogosHTML5.zip?dl=0)</td>
+    <td>HTML, CSS e JavaScript</td>
     <td><a href="https://github.com/Jeffrs123/estudos_digital_innovation/tree/main/jogo_de_naves">jogo_de_naves</a></td>
   </tr>
 </table>
