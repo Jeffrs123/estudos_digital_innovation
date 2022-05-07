@@ -28,9 +28,15 @@
     <td><a href="https://github.com/Jeffrs123/estudos_digital_innovation/tree/main/jogo_memoria_genius">jogo_memoria_genius</a></td>
   </tr>
   <tr>
-    <td>Jogo de Memótira estilo Genius</td>
+    <td>Jogo no Estilo Space Shooter</td>
     <td>Implementar lógica para desenvolver jogo no estilo Space Shooter. Tendo como apoio o uso da IDE Visual Studio Code.</td>
     <td>HTML, CSS e JavaScript. Objetivo trabalhar com posicionamento no CSS e lógica de programação utilizando posicionamento com CSS, manipulação do DOM, eventListeners, e manipulação de Array.</td>
     <td><a href="https://github.com/Jeffrs123/estudos_digital_innovation/tree/main/jogo_space_shooter">jogo_space_shooter</a></td>
+  </tr>
+  <tr>
+    <td>Recriando o jogo de Dinossauro sem Internet</td>
+    <td>Implementar lógica para recriar o jogo de Dinossauro Sem Internet. Tendo como apoio o uso da IDE Visual Studio Code.</td>
+    <td>HTML, CSS e JavaScript. Abordando conceitos de tags básicas HTML, manipulação de eventos, funções e manipulação de elementos HTML usando JavaScript, estilização e animações báxicas com CSS.</td>
+    <td><a href="https://github.com/Jeffrs123/estudos_digital_innovation/tree/main/jogo_dinossauro_sem_internet">jogo_dinossauro_sem_internet</a></td>
   </tr>
 </table>
