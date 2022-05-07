@@ -21,4 +21,10 @@
     <td>HTML, CSS e JavaScript</td>
     <td><a href="https://github.com/Jeffrs123/estudos_digital_innovation/tree/main/jogo_de_naves">jogo_de_naves</a></td>
   </tr>
+  <tr>
+    <td>Jogo de Memótira estilo Genius</td>
+    <td>Implementar lógica para desenvolver jogo de Memótira estilo Genius. Tendo como apoio o uso da IDE Visual Studio Code.</td>
+    <td>HTML, CSS e JavaScript de forma introdutória, sendo o principal conceito, CSS Grid, manipulação de Array e Arrow Functions.</td>
+    <td><a href="https://github.com/Jeffrs123/estudos_digital_innovation/tree/main/jogo_memoria_genius">jogo_de_naves</a></td>
+  </tr>
 </table>
